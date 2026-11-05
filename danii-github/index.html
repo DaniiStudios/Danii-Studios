@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" style="color-scheme: light;"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Danii Studios | Liveries ERLC, uniformes, UGC Roblox y bots de Discord</title>
+<meta name="description" content="Danii Studios: liveries y uniformes para ERLC, UGC para Roblox y bots de Discord a medida.">
+<style>
+:root{--bg:#050508;--panel:#0c0c12;--line:#1c1c28;--text:#ecebf5;--muted:#8a88a3;--red:#ff1f3d;--blue:#1f6bff;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;--head:"Arial Black",Impact,"Helvetica Neue",sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0,transparent,var(--bg) 75%);pointer-events:none;z-index:0}
+body>*{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+.siren{position:fixed;top:0;left:0;right:0;height:3px;z-index:30;background:linear-gradient(90deg,var(--red) 0 50%,var(--blue) 50% 100%);animation:sw 1s steps(1) infinite}
+@keyframes sw{50%{background:linear-gradient(90deg,var(--blue) 0 50%,var(--red) 50% 100%)}}
+header{position:sticky;top:3px;z-index:20;background:rgba(5,5,8,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;flex-wrap:wrap}
+.logo{font-family:var(--head);font-style:italic;letter-spacing:1px;text-transform:uppercase}.logo b{color:var(--red)}
+.links{display:flex;gap:18px;flex-wrap:wrap;font:.78rem var(--mono);text-transform:uppercase;color:var(--muted)}
+.links a:hover{color:var(--text)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:11px 26px;font:700 .85rem var(--mono);text-transform:uppercase;letter-spacing:1px;border:0;cursor:pointer;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:.2s}
+.btn:hover{background:var(--blue);box-shadow:0 0 24px var(--blue)}
+.btn.alt{background:#15151f;color:var(--text)}
+section{max-width:1100px;margin:auto;padding:70px 20px}
+.hero{text-align:center;padding:110px 20px 90px;position:relative}
+.hero::before,.hero::after{content:"";position:absolute;top:0;width:50%;height:100%;filter:blur(90px);opacity:.35;z-index:-1;animation:pulse 1s steps(1) infinite}
+.hero::before{left:0;background:radial-gradient(circle at 30% 30%,var(--red),transparent 60%)}
+.hero::after{right:0;background:radial-gradient(circle at 70% 30%,var(--blue),transparent 60%);animation-delay:.5s}
+@keyframes pulse{50%{opacity:.05}}
+.kicker{font:.78rem var(--mono);color:var(--red);letter-spacing:4px;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font:italic clamp(2.6rem,10vw,6.5rem)/.95 var(--head);text-transform:uppercase;text-shadow:-3px 0 var(--red),3px 0 var(--blue)}
+.hero p{color:var(--muted);max-width:520px;margin:22px auto 32px}
+.row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap}
+.num{font:.8rem var(--mono);color:var(--red)}
+h2{font:italic 2rem var(--head);text-transform:uppercase}
+.sub{color:var(--muted);margin-bottom:26px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);padding:20px;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%)}
+.card:nth-child(even){border-left-color:var(--blue)}
+.card h3{font:700 1rem var(--mono);text-transform:uppercase;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.9rem}
+figure{background:var(--panel);border:1px solid var(--line);overflow:hidden;position:relative}
+figure img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:.3s}
+figure:hover img{transform:scale(1.05)}
+figcaption{padding:10px 14px;font:.8rem var(--mono);text-transform:uppercase}
+.empty{grid-column:1/-1;border:1px dashed var(--line);padding:26px;text-align:center;color:var(--muted);font:.85rem var(--mono)}
+.del{display:none;position:absolute;top:8px;right:8px;background:var(--red);color:#fff;border:0;padding:4px 10px;font:.75rem var(--mono);cursor:pointer}
+body.staff .del{display:block}
+.mt{margin-top:18px}
+footer{border-top:1px solid var(--line);text-align:center;padding:30px 20px;color:var(--muted);font:.8rem var(--mono)}
+footer button{background:none;border:0;color:var(--muted);font:inherit;cursor:pointer;text-decoration:underline;margin-left:10px}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+#modal.open{display:flex}
+.box{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--red);padding:26px;width:100%;max-width:420px;max-height:90vh;overflow:auto}
+.box h3{font:italic 1.3rem var(--head);text-transform:uppercase;margin-bottom:14px}
+label{display:block;font:.75rem var(--mono);color:var(--muted);text-transform:uppercase;margin:12px 0 4px}
+input,select{width:100%;background:#09090f;border:1px solid var(--line);color:var(--text);padding:10px;font:.9rem var(--mono)}
+#msg{font:.8rem var(--mono);color:var(--red);margin-top:12px;min-height:1em}
+#locked,#unlocked{display:none}
+#modal:not(.ok) #locked{display:block}
+#modal.ok #unlocked{display:block}
+.x{float:right;background:none;border:0;color:var(--muted);font-size:1.3rem;cursor:pointer}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+
+textarea{width:100%;background:#09090f;border:1px solid var(--line);color:var(--text);padding:10px;font:.85rem var(--mono);min-height:90px;resize:vertical}
+.box{max-width:560px}
+.tabs{display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap}
+.tabs button{background:#15151f;color:var(--muted);border:1px solid var(--line);padding:7px 12px;font:.75rem var(--mono);text-transform:uppercase;cursor:pointer}
+.box[data-tab="fotos"] [data-t="fotos"],.box[data-tab="textos"] [data-t="textos"],.box[data-tab="secs"] [data-t="secs"]{background:var(--red);color:#fff}
+.pane{display:none}
+.box[data-tab="fotos"] #p-fotos,.box[data-tab="textos"] #p-textos,.box[data-tab="secs"] #p-secs{display:block}
+.sec{border:1px solid var(--line);border-left:3px solid var(--blue);padding:12px;margin-top:12px}
+.sec .top{display:flex;justify-content:space-between;align-items:center;gap:8px;font:.75rem var(--mono);color:var(--blue);text-transform:uppercase}
+.mini{background:#15151f;color:var(--text);border:1px solid var(--line);padding:3px 9px;font:.8rem var(--mono);cursor:pointer;margin-left:4px}
+.mini.r{background:var(--red);border-color:var(--red)}
+.hint{font:.72rem var(--mono);color:var(--muted);margin-top:4px}
+</style>
+</head>
+<body class="">
+<div class="siren"></div>
+<header><nav>
+<a class="logo" id="logo" href="#inicio">Danii <b>Studios</b></a>
+<div class="links" id="links"></div>
+<a class="btn" data-d="" href="https://discord.gg/3CxWFyZgQ" target="_blank" rel="noopener">Discord</a>
+</nav></header>
+
+<section class="hero" id="inicio">
+<div class="kicker" id="kick">// ERLC · Roblox · Discord</div>
+<h1 id="h1">Danii<br>Studios</h1>
+<p id="hp">Liveries, uniformes, UGC y bots que hacen que tu comunidad destaque en la ciudad.</p>
+<div class="row"><a class="btn" data-d="" href="https://discord.gg/3CxWFyZgQ" target="_blank" rel="noopener">Entrar al Discord</a></div>
+</section>
+
+<div id="secs"></div>
+
+<footer>© <span id="y">2026</span> <span id="fn">Danii Studios</span><button id="open">Staff</button></footer>
+
+<div id="modal"><div class="box" data-tab="fotos">
+<button class="x" id="close">×</button>
+<div id="locked">
+<h3>Acceso staff</h3>
+<label>Código</label><input id="code" type="password" autocomplete="off">
+<div class="mt"><button class="btn" id="enter">Entrar</button></div>
+</div>
+<div id="unlocked">
+<h3>Panel staff</h3>
+<div class="tabs"><button data-t="fotos">Fotos</button><button data-t="textos">Textos</button><button data-t="secs">Apartados</button></div>
+<div class="pane" id="p-fotos">
+<label>Apartado</label><select id="cat"></select>
+<label>Título</label><input id="title" maxlength="40" placeholder="Ej: Patrulla Sheriff">
+<label>Fotos</label><input id="files" type="file" accept="image/*" multiple="">
+<div class="mt"><button class="btn" id="up">Subir y publicar</button></div>
+<p class="hint">Con el panel abierto verás «Borrar» sobre cada foto.</p>
+</div>
+<div class="pane" id="p-textos">
+<label>Nombre de la tienda</label><input id="f-name" maxlength="40">
+<label>Etiqueta de portada</label><input id="f-kick" maxlength="60">
+<label>Descripción de portada</label><textarea id="f-hero"></textarea>
+<label>Enlace de Discord</label><input id="f-disc">
+</div>
+<div class="pane" id="p-secs">
+<div id="secEd"></div>
+<label>Nuevo apartado</label>
+<input id="newT" maxlength="40" placeholder="Título del apartado">
+<select id="newType" style="margin-top:8px"><option value="gallery">Galería de fotos</option><option value="cards">Tarjetas de texto</option></select>
+<div class="mt"><button class="mini" id="addSec">+ Añadir apartado</button></div>
+</div>
+<div class="mt" id="saveRow" style="display: block;"><button class="btn" id="saveAll">Guardar cambios</button></div>
+</div>
+<div id="msg"></div>
+</div></div>
+
+<script id="state" type="application/json">{"site":{"name":"Danii Studios","kicker":"// ERLC · Roblox · Discord","hero":"Liveries, uniformes, UGC y bots que hacen que tu comunidad destaque en la ciudad.","discord":"https://discord.gg/3CxWFyZgQ"},"sections":[{"id":"liveries","title":"Liveries ERLC","sub":"Policía, bomberos, EMS, DOT y civiles. Diseños hechos a medida.","type":"gallery"},{"id":"uniformes","title":"Uniformes","sub":"Uniformes para tu departamento, empresa o comunidad. (Próximamente)","type":"gallery"},{"id":"ugc","title":"UGC Roblox","sub":"Accesorios y objetos UGC con modelado y texturas únicas. (Próximamente)","type":"gallery"},{"id":"bots","title":"Bots de Discord","sub":"Automatiza tu servidor con bots a medida.","type":"cards","cards":[{"t":"Moderación","d":"Sanciones, logs y filtros automáticos."},{"t":"Tickets","d":"Sistema de soporte y pedidos."},{"t":"Personalizado","d":"Comandos y funciones a tu medida."}]},{"id":"comprar","title":"Cómo comprar","sub":"Todo se gestiona por Discord.","type":"cards","cards":[{"t":"1 · Entra al Discord","d":"Pulsa el botón y únete al servidor."},{"t":"2 · Abre un ticket","d":"Cuéntanos qué necesitas."},{"t":"3 · Recibe tu pedido","d":"Te enseñamos avances y lo entregamos."}]}],"items":[{"id":"8f030c06-9511-47c9-aa0b-944fc8f041e6","cat":"liveries","title":"GRS Guardia Civil","url":"images/grs-guardia-civil.png"}]}</script>
+<script>
+const $=id=>document.getElementById(id);
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+let S;try{S=JSON.parse($("state").textContent)}catch(e){S={site:{name:"Danii Studios",kicker:"",hero:"",discord:"https://discord.gg/3CxWFyZgQ"},sections:[],items:[]}}
+const msg=t=>{$("msg").textContent=t||""};
+$("y").textContent=new Date().getFullYear();
+
+function render(){
+  const s=S.site,parts=s.name.split(" "),w1=parts[0],rest=parts.slice(1).join(" ");
+  document.title=s.name;
+  $("logo").textContent="";$("logo").append(w1+" ",el("b",null,rest));
+  $("h1").textContent="";$("h1").append(w1,el("br"),rest);
+  $("kick").textContent=s.kicker;$("hp").textContent=s.hero;$("fn").textContent=s.name;
+  $("links").textContent="";$("secs").textContent="";
+  S.sections.forEach((sec,i)=>{
+    const a=el("a",null,sec.title);a.href="#"+sec.id;$("links").appendChild(a);
+    const se=el("section");se.id=sec.id;
+    const sh=el("div","sh");sh.append(el("span","num",String(i+1).padStart(2,"0")),el("h2",null,sec.title));
+    se.append(sh,el("p","sub",sec.sub||""));
+    const g=el("div","grid");
+    if(sec.type==="gallery"){
+      const list=S.items.filter(it=>it.cat===sec.id);
+      if(!list.length)g.appendChild(el("div","empty","// próximamente · pídelo por Discord"));
+      list.forEach(it=>{
+        const f=el("figure"),a2=el("a"),im=el("img"),d=el("button","del","Borrar");
+        a2.href=it.url;a2.target="_blank";a2.rel="noopener";im.src=it.url;im.alt=it.title||"Diseño";im.loading="lazy";
+        d.onclick=()=>removeItem(it.id);
+        a2.appendChild(im);f.append(a2,el("figcaption",null,it.title||"Diseño"),d);g.appendChild(f);
+      });
+      se.appendChild(g);
+      const m=el("div","mt"),b=el("a","btn alt","Pedir por Discord");b.dataset.d="";b.target="_blank";b.rel="noopener";m.appendChild(b);se.appendChild(m);
+    }else{
+      (sec.cards||[]).forEach(c=>{const k=el("div","card");k.append(el("h3",null,c.t),el("p",null,c.d));g.appendChild(k)});
+      se.appendChild(g);
+    }
+    $("secs").appendChild(se);
+  });
+  document.querySelectorAll("[data-d]").forEach(a=>a.href=s.discord);
+}
+render();
+
+/* ---------- editor ---------- */
+function fillSite(){$("f-name").value=S.site.name;$("f-kick").value=S.site.kicker;$("f-hero").value=S.site.hero;$("f-disc").value=S.site.discord}
+function readSite(){
+  const n=$("f-name").value.trim();if(n)S.site.name=n;
+  S.site.kicker=$("f-kick").value;S.site.hero=$("f-hero").value;
+  const d=$("f-disc").value.trim();if(/^https?:\/\//.test(d))S.site.discord=d;
+}
+function buildEditor(){
+  const box=$("secEd");box.textContent="";
+  S.sections.forEach((sec,i)=>{
+    const d=el("div","sec"),top=el("div","top");
+    top.appendChild(el("span",null,(sec.type==="gallery"?"Galería":"Tarjetas")+" #"+(i+1)));
+    const ctr=el("span"),up=el("button","mini","↑"),dn=el("button","mini","↓"),rm=el("button","mini r","Borrar");
+    up.onclick=()=>move(i,-1);dn.onclick=()=>move(i,1);rm.onclick=()=>{if(confirm("¿Borrar este apartado?")){syncEditor();S.sections.splice(i,1);buildEditor()}};
+    ctr.append(up,dn,rm);top.appendChild(ctr);d.appendChild(top);
+    const l1=el("label",null,"Título"),t=el("input","t");t.value=sec.title;
+    const l2=el("label",null,"Descripción"),s=el("input","s");s.value=sec.sub||"";
+    d.append(l1,t,l2,s);
+    if(sec.type==="cards"){
+      const l3=el("label",null,"Tarjetas (una por línea: Título | texto)"),c=el("textarea","c");
+      c.value=(sec.cards||[]).map(x=>x.t+" | "+x.d).join("\n");d.append(l3,c);
+    }
+    box.appendChild(d);
+  });
+  const sel=$("cat");sel.textContent="";
+  S.sections.filter(x=>x.type==="gallery").forEach(x=>{const o=el("option",null,x.title);o.value=x.id;sel.appendChild(o)});
+}
+function syncEditor(){
+  [...$("secEd").children].forEach((d,i)=>{
+    const sec=S.sections[i];if(!sec)return;
+    sec.title=d.querySelector(".t").value.trim()||sec.title;sec.sub=d.querySelector(".s").value;
+    const c=d.querySelector(".c");
+    if(c)sec.cards=c.value.split("\n").map(l=>l.trim()).filter(Boolean).map(l=>{const p=l.split("|");return{t:p[0].trim(),d:p.slice(1).join("|").trim()}});
+  });
+}
+function move(i,dir){syncEditor();const j=i+dir;if(j<0||j>=S.sections.length)return;[S.sections[i],S.sections[j]]=[S.sections[j],S.sections[i]];buildEditor()}
+$("addSec").onclick=()=>{
+  syncEditor();
+  const t=$("newT").value.trim();if(!t){msg("Escribe un título");return}
+  let id=t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"seccion";
+  while(S.sections.some(x=>x.id===id)||["inicio"].includes(id))id+="-2";
+  const type=$("newType").value;
+  S.sections.push(type==="gallery"?{id,title:t,sub:"",type}:{id,title:t,sub:"",type,cards:[{t:"Título",d:"Texto de la tarjeta"}]});
+  $("newT").value="";msg("");buildEditor();
+};
+function syncAll(){readSite();syncEditor()}
+
+/* ---------- GitHub ---------- */
+// Si tu web NO esta en usuario.github.io (por ejemplo usas dominio propio), rellena estas dos lineas:
+const GH_OWNER="";  // tu usuario de GitHub
+const GH_REPO="";   // el nombre de tu repositorio
+let TOKEN="",BR="main";
+
+function repoInfo(){
+  let o=GH_OWNER,r=GH_REPO;
+  if(!o||!r){const m=location.hostname.match(/^(.+)\.github\.io$/);if(m){o=m[1];r=location.pathname.split("/")[1]||(m[1]+".github.io")}}
+  return{o,r};
+}
+async function gh(path,opt){
+  opt=opt||{};const{o,r}=repoInfo();
+  if(!o||!r)throw new Error("Falta poner GH_OWNER y GH_REPO en index.html");
+  const res=await fetch("https://api.github.com/repos/"+o+"/"+r+path,{...opt,headers:{Accept:"application/vnd.github+json",Authorization:"Bearer "+TOKEN}});
+  const j=await res.json().catch(()=>({}));
+  if(!res.ok)throw new Error(res.status===401?"Código incorrecto":(j.message||"Error de GitHub"));
+  return j;
+}
+const b64=s=>btoa(unescape(encodeURIComponent(s)));
+async function putFile(path,content,message){
+  let sha;try{sha=(await gh("/contents/"+path+"?ref="+BR)).sha}catch(e){}
+  await gh("/contents/"+path,{method:"PUT",body:JSON.stringify({message,content,branch:BR,sha})});
+}
+async function loadRemote(){
+  try{
+    const r=await fetch("data.json?v="+Date.now());
+    const j=await r.json();
+    if(j&&j.site&&Array.isArray(j.sections)){S=j;render()}
+  }catch(e){}
+}
+loadRemote();
+async function save(){await putFile("data.json",b64(JSON.stringify(S,null,1)),"Actualizar web");render();buildEditor()}
+
+async function removeItem(id){
+  if(!confirm("¿Borrar este diseño?"))return;
+  syncAll();S.items=S.items.filter(i=>i.id!==id);
+  try{await save()}catch(e){alert(e.message||"Error al guardar")}
+}
+$("saveAll").onclick=async()=>{msg("Guardando...");try{syncAll();await save();msg("Guardado ✓ (se ve para todos en 1-2 minutos)")}catch(e){msg(e.message||"Error al guardar")}};
+
+/* ---------- acceso ---------- */
+$("open").onclick=()=>$("modal").classList.add("open");
+$("close").onclick=()=>$("modal").classList.remove("open");
+document.querySelectorAll(".tabs button").forEach(b=>b.onclick=()=>{document.querySelector(".box").dataset.tab=b.dataset.t;
+  $("saveRow").style.display=b.dataset.t==="fotos"?"none":"block"});
+$("enter").onclick=async()=>{
+  TOKEN=$("code").value.trim();msg("Comprobando...");
+  try{
+    const j=await gh("");
+    if(!j.permissions||!j.permissions.push)throw new Error("Ese código no tiene permiso para editar");
+    BR=j.default_branch||"main";
+    msg("");$("code").value="";fillSite();buildEditor();
+    $("saveRow").style.display="none";
+    $("modal").classList.add("ok");document.body.classList.add("staff");render();
+  }catch(e){TOKEN="";msg(e.message||"Error")}
+};
+$("code").addEventListener("keydown",e=>{if(e.key==="Enter")$("enter").click()});
+
+const toB64=f=>new Promise((ok,ko)=>{const r=new FileReader();r.onload=()=>ok(r.result.split(",")[1]);r.onerror=ko;r.readAsDataURL(f)});
+$("up").onclick=async()=>{
+  const files=[...$("files").files];
+  if(!files.length){msg("Elige al menos una foto");return}
+  if(!$("cat").value){msg("Primero crea un apartado de galería");return}
+  try{
+    syncAll();
+    for(let i=0;i<files.length;i++){
+      const f=files[i];
+      if(f.size>8*1024*1024)throw new Error("Cada foto debe pesar menos de 8 MB");
+      msg("Subiendo "+(i+1)+" de "+files.length+"...");
+      const ext=(f.name.split(".").pop()||"png").toLowerCase().replace(/[^a-z0-9]/g,"").slice(0,5)||"png";
+      const name=crypto.randomUUID()+"."+ext;
+      await putFile("images/"+name,await toB64(f),"Subir foto");
+      S.items.push({id:crypto.randomUUID(),cat:$("cat").value,title:$("title").value.trim(),url:"images/"+name});
+    }
+    await save();$("files").value="";$("title").value="";msg("Publicado ✓ (las fotos tardan 1-2 minutos en verse)");
+  }catch(e){msg(e.message||"Error al subir")}
+};
+</script>
+
+
+</body></html>
